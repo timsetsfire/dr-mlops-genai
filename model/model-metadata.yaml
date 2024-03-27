@@ -1,0 +1,20 @@
+name: Open AI Feature Engineer
+runtimeParameterDefinitions:
+- fieldName: VDB_URL
+  type: string 
+- fieldName: DATAROBOT_API_TOKEN
+  type: credential 
+- fieldName: DATAROBOT_KEY
+  type: credential
+- fieldName: OPENAI_API_KEY
+  type: credential
+  description: Token for openai llms
+targetType: textgeneration
+type: inference
+environmentID: 64c964448dd3f0c07f47d040
+validation:
+  # Path is relative to this file
+  input: ../test_dataset.csv
+inferenceModel:
+  targetName: resultText
+
